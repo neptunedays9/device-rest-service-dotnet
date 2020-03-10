@@ -10,7 +10,7 @@ using System.Threading.Tasks;
         Task<ResponseModel> ProcessDataAsync(List<DeviceModel> Devices, 
             int operation);
 
-        Task AddVehicleAsync(List<DeviceModel> Devices);
+        Task AddProductAsync(List<DeviceModel> Devices);
         Task<PurchaseModel> CalculateDiscountAsync(List<DeviceModel> Devices);
 
     }

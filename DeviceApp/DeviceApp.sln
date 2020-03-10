@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api", "DeviceApp.api\DeviceApp.api.csproj", "{3F94EB86-D10E-4F78-96EA-A6A7B455555A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.tests", "DeviceApp.api.tests\DeviceApp.api.tests.csproj", "{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.lib", "DeviceApp.api.lib\DeviceApp.api.lib.csproj", "{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F94EB86-D10E-4F78-96EA-A6A7B455555A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F94EB86-D10E-4F78-96EA-A6A7B455555A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F94EB86-D10E-4F78-96EA-A6A7B455555A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F94EB86-D10E-4F78-96EA-A6A7B455555A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

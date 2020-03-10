@@ -29,7 +29,7 @@ using System.Threading.Tasks;
             ResponseModel res = new ResponseModel();
             if(operation == (int) CommonConstants.operation.operationAdd)
             {
-                await AddVehicleAsync(Devices);
+                await AddProductAsync(Devices);
                 res.operationStatus = CommonConstants.operationSuccess;
             }
             else if(operation == (int) CommonConstants.operation.operationCalculate)
@@ -52,7 +52,7 @@ using System.Threading.Tasks;
         /*
          * Add / Update the elements
          */
-        public async Task AddVehicleAsync(List<DeviceModel> Devices)
+        public async Task AddProductAsync(List<DeviceModel> Devices)
         {
             //perform preprocessing on the input list
             var DeviceObjList = _DeviceServiceHelper.PreProcessList(Devices);
