@@ -38,12 +38,11 @@ using System.Collections.Generic;
          */
         [HttpPost]
         [Authorize]
-        public async Task<ResponseModel> ProcessDataAsync([FromBody] RequestModel input)
+        public async Task<AddResponseModel> AddDataAsync([FromBody] AddRequestModel input)
         {
             try
             {
-                var responseModel = await _DeviceService.ProcessDataAsync(input.Devices.ToList(), 
-                    input.operation);
+                var responseModel = await _DeviceService.AddProductAsync(input.Devices.ToList());
                 if (responseModel != null)
                 {
                     return responseModel;
@@ -57,5 +56,34 @@ using System.Collections.Generic;
             return null;
         }
 
+        /*
+         * Endpoint <server>/api/Device
+         * REST endpoint to add/update/calculate-discount
+         * Sample JSON
+         * {
+         *    "Devices": [{],{]],
+         *    "operation" : 1
+         * }
+         * operation 1(add/update) 2(purchase)
+         */
+        [HttpPost("/discount")]
+        [Authorize]
+        public async Task<DiscountResponseModel> CalculateDiscountAsync([FromBody] DiscountRequestModel input)
+        {
+            try
+            {
+                var responseModel = await _DeviceService.CalculateDiscountAsync(input.Devices.ToList());
+                if (responseModel != null)
+                {
+                    return responseModel;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            return null;
+        }
     }
 }

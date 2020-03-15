@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 {
     public interface IDeviceService
     {
-        Task<ResponseModel> ProcessDataAsync(List<DeviceModel> Devices, 
-            int operation);
-
-        Task AddProductAsync(List<DeviceModel> Devices);
-        Task<PurchaseModel> CalculateDiscountAsync(List<DeviceModel> Devices);
+        Task<AddResponseModel> AddProductAsync(List<DeviceModel> Devices);
+        
+        Task<DiscountResponseModel> CalculateDiscountAsync(List<int> Devices);
 
     }
 }
