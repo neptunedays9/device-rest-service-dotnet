@@ -22,12 +22,15 @@ namespace DeviceApp.api.lib.Repository
 
         public async Task<int> Add(Device device)
         {
-            return 1;
+            devices.Add(device);
+            return devices.FindIndex(i => i.Id == device.Id);
         }
 
-        public async Task<Device> Update(Device device)
+        public async Task<int> Update(Device device)
         {
-            return new Device();
+            int index = devices.FindIndex(i => i.Id == device.Id);
+            devices[index] = device;
+            return index;
         }
     }
 }

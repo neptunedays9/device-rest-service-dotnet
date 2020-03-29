@@ -10,6 +10,6 @@ namespace DeviceApp.api.lib.Repository
     {
         Task<List<Device>> GetAllDevices();
         Task<int> Add(Device device);
-        Task<Device> Update(Device device);
+        Task<int> Update(Device device);
     }
 }

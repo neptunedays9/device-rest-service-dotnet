@@ -6,7 +6,7 @@ namespace DeviceApp.api.tests
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Device tests");
         }
     }
 }
