@@ -7,7 +7,6 @@ using System.Collections.Generic;
  using Microsoft.AspNetCore.Authorization;
  using Microsoft.AspNetCore.Mvc;
 
-
  namespace DeviceApp.api.Controllers
 {
     [Route("api/v1/[controller]")]
@@ -23,7 +22,22 @@ using System.Collections.Generic;
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+
             return new string[] { "success" };
+        }
+
+        // GET api/Devices
+        [HttpGet("{id}")]
+        public HeaderResponseModel GetDeviceHeader()
+        {
+            HeaderResponseModel obj = new HeaderResponseModel();
+            Header h = new Header {
+                id = "1",
+                description = "d"
+            };
+            obj.objHeaders.Add(h);
+
+            return obj;
         }
 
         /*
