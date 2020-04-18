@@ -9,7 +9,6 @@ namespace DeviceApp.api.Model
     }
 
     public class HeaderResponseModel {
-        public List <Header> objHeaders;
-        
+        public List<Header> devices {get; set;}
     }
 }

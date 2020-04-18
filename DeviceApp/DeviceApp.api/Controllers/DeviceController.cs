@@ -27,17 +27,28 @@ using System.Collections.Generic;
         }
 
         // GET api/Devices
-        [HttpGet("{id}")]
+        [HttpGet("header")]
         public HeaderResponseModel GetDeviceHeader()
         {
-            HeaderResponseModel obj = new HeaderResponseModel();
-            Header h = new Header {
+            HeaderResponseModel response = new HeaderResponseModel();
+            
+            var objList = new List<Header>();
+
+            objList.Add(new Header {
                 id = "1",
                 description = "d"
-            };
-            obj.objHeaders.Add(h);
+                }
+            );
 
-            return obj;
+            objList.Add(new Header {
+                id = "2",
+                description = "dd"
+                }
+            );
+
+            response.devices = objList;
+            
+            return response;
         }
 
         /*

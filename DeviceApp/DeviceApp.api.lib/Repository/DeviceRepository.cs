@@ -8,8 +8,10 @@ namespace DeviceApp.api.lib.Repository
     {
         private List<Device> devices;
 
-        DeviceRepository()
+        public DeviceRepository()
         {
+            devices = new List<Device>();
+            
             devices.Add(new Device
             {
                 Id = 123
