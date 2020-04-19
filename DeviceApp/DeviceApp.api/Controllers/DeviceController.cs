@@ -46,6 +46,18 @@ using System.Collections.Generic;
                 }
             );
 
+            objList.Add(new Header {
+                id = "3",
+                description = "ddd"
+                }
+            );
+
+            objList.Add(new Header {
+                id = "4",
+                description = "dddd"
+                }
+            );
+
             response.devices = objList;
             
             return response;
