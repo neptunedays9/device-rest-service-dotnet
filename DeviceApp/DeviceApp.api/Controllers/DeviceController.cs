@@ -9,6 +9,11 @@ using System.Collections.Generic;
 
  namespace DeviceApp.api.Controllers
 {
+    public class Test {
+        public string username { get; set;}
+        public string password { get; set;}
+    }
+
     [Route("api/v1/[controller]")]
     [ApiController]
     public class DeviceController : ControllerBase
@@ -121,6 +126,11 @@ using System.Collections.Generic;
             }
 
             return null;
+        }
+
+        [HttpPost("image")]
+        public string AddImage(ImageRequestModel image) {
+            return "success";
         }
     }
 }
