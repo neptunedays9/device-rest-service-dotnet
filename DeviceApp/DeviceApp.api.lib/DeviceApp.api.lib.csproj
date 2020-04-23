@@ -1,7 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-    <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
-    </PropertyGroup>
-
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.7.0"/>
+    <PackageReference Include="MongoDB.Bson" Version="2.7.0"/>
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.7.0"/>
+  </ItemGroup>
 </Project>

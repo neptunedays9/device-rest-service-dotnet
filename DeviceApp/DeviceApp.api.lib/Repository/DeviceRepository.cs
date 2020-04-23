@@ -6,6 +6,7 @@ namespace DeviceApp.api.lib.Repository
 {
     public class DeviceRepository : IDeviceRepository
     {
+        private readonly IMongoDeviceContext _deviceContext;
         private List<Device> devices;
 
         public DeviceRepository()

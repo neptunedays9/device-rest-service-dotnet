@@ -27,10 +27,17 @@ namespace DeviceApp.api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);            
+ 
             services.AddTransient<IDeviceService, DeviceService>();
+
+            services.AddTransient<IImageService, ImageService>();
+
             services.AddTransient<IDeviceRepository, DeviceRepository>();
+
+            services.AddTransient<IImageRepository, ImageRepository>();
+
+            services.AddSingleton<IMongoDeviceContext, MongoDeviceContext>();
             
             var config = new MapperConfiguration(cfg => cfg.CreateMap <DeviceModel, Device>());
             config.AssertConfigurationIsValid();
