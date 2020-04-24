@@ -3,7 +3,7 @@ using DeviceApp.api.lib.Db;
 namespace DeviceApp.api.lib.Repository {
 
     public interface IImageRepository {
-        void AddImage(Image img);
+        void AddImage(ImageEntity img);
 
     }
 
@@ -14,7 +14,7 @@ namespace DeviceApp.api.lib.Repository {
         public ImageRepository(IMongoDeviceContext deviceContext) {
             _deviceContext = deviceContext;
         }
-        public void AddImage(Image img) {
+        public void AddImage(ImageEntity img) {
             _deviceContext.images.InsertOne(img);
         }
 

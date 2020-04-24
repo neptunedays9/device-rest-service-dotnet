@@ -8,8 +8,8 @@ namespace DeviceApp.api.lib.Repository
 {
     public interface IDeviceRepository
     {
-        Task<List<Device>> GetAllDevices();
-        Task<int> Add(Device device);
-        Task<int> Update(Device device);
+        Task<List<DeviceEntity>> GetAllDevices();
+        Task<int> Add(DeviceEntity device);
+        Task<int> Update(DeviceEntity device);
     }
 }

@@ -16,7 +16,7 @@ namespace DeviceApp.Api.Devices.Tests.Service
 {
     public class DeviceServiceTest
     {
-        private List<Device> deviceListMock;
+        private List<DeviceEntity> deviceListMock;
         private Mock<IDeviceRepository> deviceRepoMock = new Mock<IDeviceRepository>();
         
         [Fact]
@@ -49,10 +49,10 @@ namespace DeviceApp.Api.Devices.Tests.Service
             listLength = 2;
             await deviceService.AddProductAsync(MockDataFactory.GetListWithUniqueDeviceModels(listLength));
             
-            deviceRepoMock.Verify(mock => mock.Add(It.IsAny<Device>()), 
+            deviceRepoMock.Verify(mock => mock.Add(It.IsAny<DeviceEntity>()), 
                 Times.Exactly(listLength));
             
-            deviceRepoMock.Verify(mock => mock.Update(It.IsAny<Device>()), 
+            deviceRepoMock.Verify(mock => mock.Update(It.IsAny<DeviceEntity>()), 
                 Times.Exactly(0));
         }
 
@@ -65,23 +65,23 @@ namespace DeviceApp.Api.Devices.Tests.Service
             listLength = 2;
             await deviceService.AddProductAsync(MockDataFactory.GetListWithUniqueDeviceModels(listLength));
             
-            deviceRepoMock.Verify(mock => mock.Add(It.IsAny<Device>()), 
+            deviceRepoMock.Verify(mock => mock.Add(It.IsAny<DeviceEntity>()), 
                 Times.Exactly(0));
             
-            deviceRepoMock.Verify(mock => mock.Update(It.IsAny<Device>()), 
+            deviceRepoMock.Verify(mock => mock.Update(It.IsAny<DeviceEntity>()), 
                 Times.Exactly(listLength));
         }
         
         private DeviceService CreateDeviceService(int listLength)
         {
             deviceListMock = MockDataFactory.GetListWithUniqueDevices(listLength);
-            var deviceMock = new Mock<Device>();
+            var deviceMock = new Mock<DeviceEntity>();
             
             deviceRepoMock.Setup(i => i.GetAllDevices()).Returns(Task.FromResult(deviceListMock));
-            deviceRepoMock.Setup(x => x.Add(It.IsAny<Device>())).Returns(Task.FromResult(1));
-            deviceRepoMock.Setup(x => x.Update(It.IsAny<Device>())).Returns(Task.FromResult(1));
+            deviceRepoMock.Setup(x => x.Add(It.IsAny<DeviceEntity>())).Returns(Task.FromResult(1));
+            deviceRepoMock.Setup(x => x.Update(It.IsAny<DeviceEntity>())).Returns(Task.FromResult(1));
 
-            var config = new MapperConfiguration(cfg => cfg.CreateMap <DeviceModel, Device>());
+            var config = new MapperConfiguration(cfg => cfg.CreateMap <DeviceModel, DeviceEntity>());
             config.AssertConfigurationIsValid();
             IMapper mapper = config.CreateMapper();
 

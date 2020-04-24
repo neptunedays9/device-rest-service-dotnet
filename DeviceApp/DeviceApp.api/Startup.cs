@@ -39,7 +39,7 @@ namespace DeviceApp.api
 
             services.AddSingleton<IMongoDeviceContext, MongoDeviceContext>();
             
-            var config = new MapperConfiguration(cfg => cfg.CreateMap <DeviceModel, Device>());
+            var config = new MapperConfiguration(cfg => cfg.CreateMap <DeviceModel, DeviceEntity>());
             config.AssertConfigurationIsValid();
             
             IMapper mapper = config.CreateMapper();

@@ -21,9 +21,9 @@ namespace DeviceApp.api.Service
          * Check if duplicate entry found in the list
          * AutoTransform the model to the Device objects
          */
-        public List<Device> PreProcessList(List<DeviceModel> Devices)
+        public List<DeviceEntity> PreProcessList(List<DeviceModel> Devices)
         {
-            var DeviceObjList = new List<Device>();
+            var DeviceObjList = new List<DeviceEntity>();
             Devices.ForEach(c =>
             {
                 var res = Devices.FindAll(i => i.Id == c.Id);
@@ -33,7 +33,7 @@ namespace DeviceApp.api.Service
                         ErrorSet.DuplicateItemFoundErrorId,
                         ErrorSet.DuplicateItemFoundErrorMessage);
                 }
-                DeviceObjList.Add(_mapper.Map<DeviceModel, Device>(c));
+                DeviceObjList.Add(_mapper.Map<DeviceModel, DeviceEntity>(c));
 
             });
 
@@ -44,7 +44,7 @@ namespace DeviceApp.api.Service
          * Confirm that all the elements in purchase list are present in repo
          * Take the repo for calculation of discount
          */
-        public async Task<List<DeviceModel>> ValidateProcessListAsync(List<int> requestDevices, List<Device> allDevices)
+        public async Task<List<DeviceModel>> ValidateProcessListAsync(List<int> requestDevices, List<DeviceEntity> allDevices)
         {
             bool result = true;
             var devices = new List<DeviceModel>();

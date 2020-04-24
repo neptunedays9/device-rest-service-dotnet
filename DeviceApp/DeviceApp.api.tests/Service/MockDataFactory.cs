@@ -57,12 +57,12 @@ namespace DeviceApp.Api.Tests.Service
             return deviceModelList;
         }
 
-        public static List<Device> GetListWithUniqueDevices(int listLength)
+        public static List<DeviceEntity> GetListWithUniqueDevices(int listLength)
         {
-            var deviceList = new List<Device>();
+            var deviceList = new List<DeviceEntity>();
             for (int i = 0; i < listLength; i++)
             {
-                var device = new Device()
+                var device = new DeviceEntity()
                 {
                     Id = i,
                     Colour = "Red",

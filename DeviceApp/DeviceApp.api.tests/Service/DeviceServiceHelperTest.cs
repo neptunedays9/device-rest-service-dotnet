@@ -21,7 +21,7 @@ namespace DeviceApp.Api.Tests.Service
             deviceModelList.Add(deviceModelMock);
             deviceModelList.Add(deviceModelMock);
            
-            var config = new MapperConfiguration(cfg => cfg.CreateMap <DeviceModel, Device>());
+            var config = new MapperConfiguration(cfg => cfg.CreateMap <DeviceModel, DeviceEntity>());
             config.AssertConfigurationIsValid();
             
             IMapper mapper = config.CreateMapper();
@@ -47,7 +47,7 @@ namespace DeviceApp.Api.Tests.Service
             };
             deviceModelList.Add(deviceModelMock);
            
-            var config = new MapperConfiguration(cfg => cfg.CreateMap <DeviceModel, Device>());
+            var config = new MapperConfiguration(cfg => cfg.CreateMap <DeviceModel, DeviceEntity>());
             config.AssertConfigurationIsValid();
             
             IMapper mapper = config.CreateMapper();

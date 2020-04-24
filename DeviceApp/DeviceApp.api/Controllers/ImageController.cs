@@ -22,7 +22,7 @@ using System.Collections.Generic;
 
         [HttpPost]
         public string AddImage(ImageRequestModel image) {
-            _imageService.AddImage(image.name, image.type, image.uri);
+            _imageService.AddImage(image.name, image.type, image.data);
 
             return "success";
         }
