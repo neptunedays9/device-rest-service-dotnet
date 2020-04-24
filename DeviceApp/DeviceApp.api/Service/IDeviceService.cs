@@ -1,6 +1,6 @@
-﻿﻿﻿using System.Collections.Generic;
+﻿﻿using System.Collections.Generic;
 using System.Threading.Tasks;
- using DeviceApp.api.Model;
+using DeviceApp.api.Model;
 
 
  namespace DeviceApp.api.Service

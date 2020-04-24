@@ -1,9 +1,6 @@
 
-using MongoDB.Bson;
 using MongoDB.Driver;
-// using MongoDB.Driver.GridFS;
-using System;
-using System.Threading.Tasks;
+
 
 namespace DeviceApp.api.lib.Db {
 

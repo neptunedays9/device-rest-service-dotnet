@@ -1,11 +1,6 @@
 using DeviceApp.api.lib.Db;
 using DeviceApp.api.lib.Repository;
 
-using System;
-using System.Drawing;
-using System.IO;
-using System.Net;
-
 namespace DeviceApp.api.Service {
 
     public interface IImageService

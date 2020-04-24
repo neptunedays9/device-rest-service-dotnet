@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
- using DeviceApp.api.Common;
-  using DeviceApp.api.lib.Db;
-  using DeviceApp.api.lib.Repository;
-  using DeviceApp.api.Model;
+using DeviceApp.api.Common;
+using DeviceApp.api.lib.Repository;
+using DeviceApp.api.Model;
 
  namespace DeviceApp.api.Service
 {

@@ -1,3 +1,5 @@
+using MongoDB.Bson;
+
 using DeviceApp.api.lib.Db;
 
 namespace DeviceApp.api.lib.Repository {
@@ -14,6 +16,7 @@ namespace DeviceApp.api.lib.Repository {
         public ImageRepository(IMongoDeviceContext deviceContext) {
             _deviceContext = deviceContext;
         }
+
         public void AddImage(ImageEntity img) {
             _deviceContext.images.InsertOne(img);
         }
