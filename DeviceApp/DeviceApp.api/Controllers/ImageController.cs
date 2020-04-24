@@ -21,10 +21,12 @@ using System.Collections.Generic;
         }
 
         [HttpPost]
-        public string AddImage(ImageRequestModel image) {
-            _imageService.AddImage(image.name, image.type, image.data);
-
-            return "success";
+        public ImageResponseModel AddImage(ImageRequestModel image) {
+            var imgId =_imageService.AddImage(image.name, image.type, image.data);
+            var imgResponse = new ImageResponseModel {
+                imageId = imgId
+            };
+            return imgResponse;
         }
     }
 }

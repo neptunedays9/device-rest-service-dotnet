@@ -122,12 +122,5 @@ using System.Collections.Generic;
 
             return null;
         }
-
-        [HttpPost("image")]
-        public string AddImage(ImageRequestModel image) {
-            // _imageService.AddImage(image.name, image.type, image.uri);
-
-            return "success";
-        }
     }
 }
