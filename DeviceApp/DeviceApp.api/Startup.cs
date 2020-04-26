@@ -37,6 +37,8 @@ namespace DeviceApp.api
 
             services.AddTransient<IImageRepository, ImageRepository>();
 
+            services.AddTransient<IModelRepository, ModelRepository>();
+            
             services.AddSingleton<IMongoDeviceContext, MongoDeviceContext>();
             
             var config = new MapperConfiguration(cfg => cfg.CreateMap <DeviceModel, DeviceEntity>());

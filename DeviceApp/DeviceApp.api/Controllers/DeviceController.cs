@@ -13,10 +13,10 @@ using System.Collections.Generic;
     [ApiController]
     public class DeviceController : ControllerBase
     {
-        private readonly IDeviceService _DeviceService;
-        public DeviceController(IDeviceService DeviceService)
+        private readonly IDeviceService _deviceService;
+        public DeviceController(IDeviceService deviceService)
         {
-            _DeviceService = DeviceService;
+            _deviceService = deviceService;
         }
         // GET api/Devices
         [HttpGet]
@@ -79,7 +79,7 @@ using System.Collections.Generic;
         {
             try
             {
-                var responseModel = await _DeviceService.AddProductAsync(input.Devices.ToList());
+                var responseModel = await _deviceService.AddProductAsync(input.Devices.ToList());
                 if (responseModel != null)
                 {
                     return responseModel;
@@ -109,7 +109,7 @@ using System.Collections.Generic;
         {
             try
             {
-                var responseModel = await _DeviceService.CalculateDiscountAsync(input.Devices.ToList());
+                var responseModel = await _deviceService.CalculateDiscountAsync(input.Devices.ToList());
                 if (responseModel != null)
                 {
                     return responseModel;
@@ -121,6 +121,16 @@ using System.Collections.Generic;
             }
 
             return null;
+        }
+
+        [HttpGet("models")]
+        public async Task<DeviceModelResponse> GetDeviceModelAsync() {
+
+            var models = await _deviceService.GetAllModels();
+
+            return new DeviceModelResponse {
+                deviceModels = models
+            };
         }
     }
 }

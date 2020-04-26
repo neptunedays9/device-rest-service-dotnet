@@ -11,5 +11,6 @@ using DeviceApp.api.Model;
         
         Task<DiscountResponseModel> CalculateDiscountAsync(List<int> Devices);
 
+        Task<List<string>> GetAllModels();
     }
 }

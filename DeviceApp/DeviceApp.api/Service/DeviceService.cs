@@ -10,13 +10,18 @@ using DeviceApp.api.Model;
 {
     public class DeviceService : IDeviceService
     {
-        private IDeviceRepository _DeviceRepo;
-        private DeviceServiceHelper _DeviceServiceHelper;
+        private IDeviceRepository _deviceRepo;
+        private DeviceServiceHelper _deviceServiceHelper;
+
+        private IModelRepository _modelRepo;
         
-        public DeviceService(IDeviceRepository DeviceRepo, DeviceServiceHelper DeviceServiceHelper)
+        public DeviceService(IDeviceRepository deviceRepo, 
+            DeviceServiceHelper deviceServiceHelper,
+            IModelRepository modelRepo)
         {
-            _DeviceRepo = DeviceRepo;
-            _DeviceServiceHelper = DeviceServiceHelper;
+            _deviceRepo = deviceRepo;
+            _deviceServiceHelper = deviceServiceHelper;
+            _modelRepo = modelRepo;
         }
 
         /*
@@ -25,7 +30,7 @@ using DeviceApp.api.Model;
         public async Task<AddResponseModel> AddProductAsync(List<DeviceModel> Devices)
         { 
             //perform preprocessing on the input list
-            var DeviceObjList = _DeviceServiceHelper.PreProcessList(Devices);
+            var DeviceObjList = _deviceServiceHelper.PreProcessList(Devices);
             
             if (DeviceObjList != null)
             {
@@ -33,15 +38,15 @@ using DeviceApp.api.Model;
                 {
                     DeviceObjList.ForEach(async Device =>
                     {
-                        var allDevices = await _DeviceRepo.GetAllDevices();
+                        var allDevices = await _deviceRepo.GetAllDevices();
                         var DeviceObj = allDevices.Find(i => i.Id == Device.Id);
                         if (DeviceObj != null)
                         {
-                            await _DeviceRepo.Update(Device);
+                            await _deviceRepo.Update(Device);
                         }
                         else
                         {
-                            int a = await _DeviceRepo.Add(Device);
+                            int a = await _deviceRepo.Add(Device);
                         }
                     });
                     
@@ -70,7 +75,7 @@ using DeviceApp.api.Model;
         {
             try
             {
-                var repoDevices = await _DeviceServiceHelper.ValidateProcessListAsync(Devices, await _DeviceRepo.GetAllDevices());
+                var repoDevices = await _deviceServiceHelper.ValidateProcessListAsync(Devices, await _deviceRepo.GetAllDevices());
                 //perform preprocessing on the input list
                 if (repoDevices != null)
                 {
@@ -102,6 +107,10 @@ using DeviceApp.api.Model;
             {
                 throw e;
             }
+        }
+
+        public async Task<List<string>> GetAllModels() {
+            return await _modelRepo.GetAllModels();
         }
 
     }

@@ -11,6 +11,8 @@ namespace DeviceApp.api.lib.Db {
 
             IMongoCollection<ImageEntity> images { get; }
 
+            IMongoCollection<ModelEntity> models { get; }
+
     }
 
     public class MongoDeviceContext : IMongoDeviceContext {
@@ -24,6 +26,6 @@ namespace DeviceApp.api.lib.Db {
         public IMongoDatabase Database => _database;
         public IMongoCollection<DeviceEntity> devices => _database.GetCollection<DeviceEntity>("Device");
         public IMongoCollection<ImageEntity> images => _database.GetCollection<ImageEntity>("Image");
-
+       public IMongoCollection<ModelEntity> models => _database.GetCollection<ModelEntity>("Model");
     }
 }
