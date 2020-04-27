@@ -124,12 +124,23 @@ using System.Collections.Generic;
         }
 
         [HttpGet("models")]
-        public async Task<DeviceModelResponse> GetDeviceModelAsync() {
+        public async Task<DeviceModelListResponse> GetDeviceModelAsync() {
+
+            var response = new List<DeviceModelResponse>();
 
             var models = await _deviceService.GetAllModels();
+    
+            var index = 0;
+            models.ForEach(element => {
+                response.Add(
+                    new DeviceModelResponse {
+                        id = (index++).ToString(),
+                        deviceModel = element,
+                    });
+            });
 
-            return new DeviceModelResponse {
-                deviceModels = models
+            return new DeviceModelListResponse {
+                deviceModels = response
             };
         }
     }

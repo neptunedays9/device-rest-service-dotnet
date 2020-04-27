@@ -23,6 +23,7 @@ namespace DeviceApp.api.lib.Repository {
         public async Task<List<string>> GetAllModels() {
             List<string> modelList = new List<string>();
             
+            // var cursor = await _deviceContext.models.FindAsync(item => item.Name == "iPhone 7");
             var cursor = await _deviceContext.models.FindAsync(FilterDefinition<ModelEntity>.Empty);
 
             await cursor.ForEachAsync(element => {
