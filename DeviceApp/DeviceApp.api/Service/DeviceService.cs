@@ -1,10 +1,13 @@
-﻿﻿﻿using System;
+﻿﻿using System;
+
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using DeviceApp.api.Common;
+// using System.Threading.Tasks;
 using DeviceApp.api.lib.Repository;
 using DeviceApp.api.Model;
+using DeviceApp.util.lib.Common;
+using DeviceApp.util.lib.Error;
 
  namespace DeviceApp.api.Service
 {

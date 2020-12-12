@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using AutoMapper;
-using DeviceApp.api.Common;
+using DeviceApp.util.lib.Error;
 using DeviceApp.api.lib.Db;
 using DeviceApp.api.Model;
 using DeviceApp.api.Service;

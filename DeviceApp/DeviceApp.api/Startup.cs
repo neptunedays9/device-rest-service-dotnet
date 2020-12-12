@@ -1,6 +1,6 @@
 ﻿﻿using System.Net;
 using AutoMapper;
-using DeviceApp.api.Common;
+using DeviceApp.util.lib.Error;
 using DeviceApp.api.lib.Db;
 using DeviceApp.api.lib.Repository;
 using DeviceApp.api.Model;

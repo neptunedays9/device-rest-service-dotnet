@@ -1,6 +1,6 @@
 ﻿﻿
 
-using DeviceApp.api.Common;
+using DeviceApp.util.lib.Common;
 using DeviceApp.api.Model;
 
 namespace DeviceApp.api.Service

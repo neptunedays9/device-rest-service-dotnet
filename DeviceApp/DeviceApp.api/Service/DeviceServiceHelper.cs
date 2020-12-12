@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using AutoMapper;
-using DeviceApp.api.Common;
+using DeviceApp.util.lib.Error;
 using DeviceApp.api.lib.Db;
 using DeviceApp.api.Model;
 

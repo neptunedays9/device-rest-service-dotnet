@@ -12,5 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DeviceApp.api.lib\DeviceApp.api.lib.csproj"/>
+    <ProjectReference Include="..\DeviceApp.util.lib\DeviceApp.util.lib.csproj"/>
   </ItemGroup>
 </Project>
