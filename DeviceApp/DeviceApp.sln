@@ -2,12 +2,17 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api", "DeviceApp.api\DeviceApp.api.csproj", "{3F94EB86-D10E-4F78-96EA-A6A7B455555A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.test", "DeviceApp.api.test\DeviceApp.api.test.csproj", "{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.lib", "DeviceApp.api.lib\DeviceApp.api.lib.csproj", "{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.util.lib", "DeviceApp.util.lib\DeviceApp.util.lib.csproj", "{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.test", "DeviceApp.api.test\DeviceApp.api.test.csproj", "{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.lib.test", "DeviceApp.api.lib.test\DeviceApp.api.lib.test.csproj", "{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.util.lib.test", "DeviceApp.util.lib.test\DeviceApp.util.lib.test.csproj", "{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}"
+EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

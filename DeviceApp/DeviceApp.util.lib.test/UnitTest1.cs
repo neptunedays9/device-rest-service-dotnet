@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace DeviceApp.api.test
+namespace DeviceApp.util.lib.test
 {
     public class UnitTest1
     {
