@@ -7,12 +7,12 @@ using DeviceApp.api.lib.Db;
 using DeviceApp.api.lib.Repository;
 using DeviceApp.api.Model;
 using DeviceApp.api.Service;
-using DeviceApp.Api.Tests.Service;
+using DeviceApp.api.test.Service;
 using Moq;
 using Xunit;
 
 
-namespace DeviceApp.Api.Devices.Tests.Service
+namespace DeviceApp.api.test.Service
 {
     public class DeviceServiceTest
     {
