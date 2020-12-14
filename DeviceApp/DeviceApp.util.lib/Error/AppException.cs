@@ -10,12 +10,12 @@ namespace DeviceApp.util.lib.Error
         
         public string ErrorMessage { get; set; }
 
-        public AppException(HttpStatusCode responseCode,
-            string errorCode, string errorMessage)
+        public AppException(string errorCode)
         {
-            ResponseCode = responseCode;
+            var errorObj = ErrorMap.GetErrorDetails(errorCode);
+            ResponseCode = errorObj.apiStatusCode;
             ErrorCode = errorCode;
-            ErrorMessage = errorMessage;
+            ErrorMessage = errorObj.appErrorMessage;
         }
     }
 }
