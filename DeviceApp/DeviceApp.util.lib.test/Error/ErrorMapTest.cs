@@ -10,8 +10,7 @@ namespace DeviceApp.util.lib.test
         public void GetErrorDetails_return_object()
         {
             var a = ErrorMap.GetErrorDetails(ErrorSet.DuplicateItemFoundErrorId);
-            Console.WriteLine("Object:", a);
-            Assert.Equal(false, false);
+            Assert.Equal(a.appErrorMessage, ErrorSet.DuplicateItemFoundErrorMessage);
         }
     }
 }

@@ -29,9 +29,7 @@ namespace DeviceApp.api.Service
                 var res = Devices.FindAll(i => i.Id == c.Id);
                 if (res.Count > 1)
                 {
-                    throw new AppException(HttpStatusCode.Forbidden,
-                        ErrorSet.DuplicateItemFoundErrorId,
-                        ErrorSet.DuplicateItemFoundErrorMessage);
+                    throw new AppException(ErrorSet.DuplicateItemFoundErrorId);
                 }
                 DeviceObjList.Add(_mapper.Map<DeviceModel, DeviceEntity>(c));
 

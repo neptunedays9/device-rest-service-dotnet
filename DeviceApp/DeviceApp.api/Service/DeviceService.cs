@@ -61,8 +61,7 @@ using DeviceApp.util.lib.Error;
                 }
                 catch (Exception e)
                 {
-                    throw new AppException(HttpStatusCode.InternalServerError,
-                        ErrorSet.ItemProcessingErrorId, ErrorSet.ItemProcessingErrorMessage);
+                    throw new AppException(ErrorSet.DuplicateItemFoundErrorId);
                 }
             }
             return null;
@@ -101,9 +100,7 @@ using DeviceApp.util.lib.Error;
                 }
                 else
                 {
-                    throw new AppException(HttpStatusCode.Forbidden,
-                        ErrorSet.InvalidPurchaseItemErrorId,
-                        ErrorSet.InvalidPurchaseItemErrorMessage);
+                    throw new AppException(ErrorSet.InvalidPurchaseItemErrorId);
                 }
             }
             catch (AppException e)

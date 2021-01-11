@@ -1,18 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# 
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api", "DeviceApp.api\DeviceApp.api.csproj", "{3F94EB86-D10E-4F78-96EA-A6A7B455555A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.lib", "DeviceApp.api.lib\DeviceApp.api.lib.csproj", "{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.lib.test", "DeviceApp.api.lib.test\DeviceApp.api.lib.test.csproj", "{8AA539DF-74D6-479B-BD36-E2909584A660}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.util.lib", "DeviceApp.util.lib\DeviceApp.util.lib.csproj", "{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.lib", "DeviceApp.api.lib\DeviceApp.api.lib.csproj", "{AA7AAF8A-278A-43F1-B3B8-FB4D1A56EFA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.test", "DeviceApp.api.test\DeviceApp.api.test.csproj", "{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.util.lib", "DeviceApp.util.lib\DeviceApp.util.lib.csproj", "{10CDA67E-A6EA-474D-A4CD-F5D24D87E821}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.lib.test", "DeviceApp.api.lib.test\DeviceApp.api.lib.test.csproj", "{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.util.lib.test", "DeviceApp.util.lib.test\DeviceApp.util.lib.test.csproj", "{E8503C8E-B739-44CE-8497-CF2FFB213F3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.util.lib.test", "DeviceApp.util.lib.test\DeviceApp.util.lib.test.csproj", "{ACA358D0-AAE6-41D5-9B3B-3AEA6FC0D227}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.api.test", "DeviceApp.api.test\DeviceApp.api.test.csproj", "{4188A24D-47C7-42F8-9297-82F220322EF0}"
 EndProject
-
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +31,25 @@ Global
 		{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAC25B35-497E-4AEF-BDC2-C26869BA0B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA539DF-74D6-479B-BD36-E2909584A660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA539DF-74D6-479B-BD36-E2909584A660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA539DF-74D6-479B-BD36-E2909584A660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA539DF-74D6-479B-BD36-E2909584A660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA7AAF8A-278A-43F1-B3B8-FB4D1A56EFA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7AAF8A-278A-43F1-B3B8-FB4D1A56EFA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7AAF8A-278A-43F1-B3B8-FB4D1A56EFA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7AAF8A-278A-43F1-B3B8-FB4D1A56EFA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10CDA67E-A6EA-474D-A4CD-F5D24D87E821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10CDA67E-A6EA-474D-A4CD-F5D24D87E821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10CDA67E-A6EA-474D-A4CD-F5D24D87E821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10CDA67E-A6EA-474D-A4CD-F5D24D87E821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8503C8E-B739-44CE-8497-CF2FFB213F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8503C8E-B739-44CE-8497-CF2FFB213F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8503C8E-B739-44CE-8497-CF2FFB213F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8503C8E-B739-44CE-8497-CF2FFB213F3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4188A24D-47C7-42F8-9297-82F220322EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4188A24D-47C7-42F8-9297-82F220322EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4188A24D-47C7-42F8-9297-82F220322EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4188A24D-47C7-42F8-9297-82F220322EF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
